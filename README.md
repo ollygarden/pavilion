@@ -11,7 +11,7 @@ bun install
 bun run dev
 ```
 
-Open the deck index shown by Vite. The repository currently includes a template gallery and a conversion of the July 2026 “The OpenTelemetry mistakes I keep seeing” talk.
+Open the deck index shown by Vite. The repository currently includes a template gallery, a conversion of the July 2026 “The OpenTelemetry mistakes I keep seeing” talk, and the September 2026 Signals Berlin lightning talk “Your agent skill was right in March.”
 
 ## Repository structure
 
@@ -29,11 +29,12 @@ Install the Chromium runtime once after installing dependencies:
 bunx playwright install chromium
 ```
 
-Export either deck:
+Export a deck:
 
 ```bash
 bun run export --deck templates
 bun run export --deck otel-mistakes
+bun run export --deck signals-berlin-agent-skill-drift
 ```
 
 PDF files go to `dist-pdf/` by default. Pass `--output path/to/deck.pdf` to choose another destination.

@@ -14,10 +14,11 @@ const output = resolve(valueAfter('--output') ?? `dist-pdf/${deck}.pdf`);
 const deckPaths = new Map([
   ['templates', '/templates.html'],
   ['otel-mistakes', '/talks/2026/2026-07-09-wearedevelopers-otel-mistakes/'],
+  ['signals-berlin-agent-skill-drift', '/talks/2026/2026-09-11-signals-berlin-agent-skill-drift/'],
 ]);
 
 if (!deckPaths.has(deck)) {
-  throw new Error(`Unknown deck "${deck}". Choose templates or otel-mistakes.`);
+  throw new Error(`Unknown deck "${deck}". Choose templates, otel-mistakes, or signals-berlin-agent-skill-drift.`);
 }
 
 await mkdir(resolve(output, '..'), { recursive: true });
