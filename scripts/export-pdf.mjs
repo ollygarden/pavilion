@@ -15,10 +15,11 @@ const deckPaths = new Map([
   ['templates', '/templates.html'],
   ['otel-mistakes', '/talks/2026/2026-07-09-wearedevelopers-otel-mistakes/'],
   ['signals-berlin-agent-skill-drift', '/talks/2026/2026-09-11-signals-berlin-agent-skill-drift/'],
+  ['code-europe-i-know-otel', '/talks/2026/2026-09-15-code-europe-i-know-otel/'],
 ]);
 
 if (!deckPaths.has(deck)) {
-  throw new Error(`Unknown deck "${deck}". Choose templates, otel-mistakes, or signals-berlin-agent-skill-drift.`);
+  throw new Error(`Unknown deck "${deck}". Choose templates, otel-mistakes, signals-berlin-agent-skill-drift, or code-europe-i-know-otel.`);
 }
 
 await mkdir(resolve(output, '..'), { recursive: true });
