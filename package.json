@@ -1,0 +1,29 @@
+{
+  "name": "@ollygarden/pavilion",
+  "private": true,
+  "type": "module",
+  "packageManager": "bun@1.4.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "export": "bun scripts/export-pdf.mjs",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fontsource/inconsolata": "^5.2.6",
+    "@fontsource-variable/space-grotesk": "^5.2.8",
+    "@revealjs/react": "0.2.1",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "reveal.js": "6.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^6.0.1",
+    "playwright-chromium": "^1.55.0",
+    "typescript": "^5.9.2",
+    "vite": "^8.0.3"
+  }
+}

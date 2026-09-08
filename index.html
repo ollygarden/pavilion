@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pavilion · OllyGarden presentations</title>
+    <style>
+      :root { color-scheme: dark; font-family: "Space Grotesk Variable", "Space Grotesk", Arial, sans-serif; }
+      * { box-sizing: border-box; }
+      body { min-height: 100vh; margin: 0; overflow-x: hidden; background: #00280e; color: #faf9f0; }
+      body::before { content: ""; position: fixed; inset: 0 0 0 58%; background: linear-gradient(110deg, #00280e 0%, rgba(0,40,14,.18) 34%, rgba(0,40,14,.76) 100%), url('/assets/source/plant-cover.jpg') center / cover; filter: saturate(.9); }
+      main { position: relative; z-index: 1; display: grid; width: min(1200px, calc(100% - 64px)); min-height: 100vh; margin: 0 auto; grid-template-columns: 1.15fr .85fr; grid-template-rows: auto 1fr; gap: 60px 92px; padding: 52px 0 64px; }
+      .brand { grid-column: 1 / -1; display: flex; align-items: center; gap: 11px; font-weight: 700; }
+      .brand img { width: 32px; height: 26px; object-fit: contain; }
+      header { align-self: center; }
+      h1 { max-width: 700px; margin: 0; font-size: clamp(54px, 6.6vw, 98px); font-weight: 700; line-height: .9; letter-spacing: -.045em; }
+      p { max-width: 610px; margin: 32px 0 0; color: #d1dccf; font-size: 20px; line-height: 1.5; }
+      .signal { display: flex; gap: 8px; width: max-content; margin-top: 52px; }
+      .signal i { width: 16px; height: 16px; background: #0ead47; }
+      .signal i:nth-child(2), .signal i:nth-child(6) { background: #d1d100; }
+      .signal i:nth-child(3), .signal i:nth-child(5) { opacity: .18; }
+      nav { align-self: end; padding: 28px 0; border-top: 8px solid #d1d100; border-bottom: 1px solid rgba(250,249,240,.22); backdrop-filter: blur(12px); }
+      a { display: block; padding: 28px 8px; border-bottom: 1px solid rgba(250,249,240,.16); color: inherit; text-decoration: none; transition: background-color .18s ease, padding-left .18s ease; }
+      a:last-child { border-bottom: 0; }
+      a:hover, a:focus-visible { padding-left: 20px; background: rgba(14,173,71,.18); outline: 2px solid #d1d100; outline-offset: 3px; }
+      strong { display: block; margin-bottom: 8px; color: #d1d100; font-size: 28px; }
+      span { color: #d1dccf; line-height: 1.45; }
+      @media (max-width: 840px) {
+        body::before { left: 35%; opacity: .46; }
+        main { grid-template-columns: 1fr; grid-template-rows: auto auto 1fr; gap: 52px; padding-top: 34px; }
+        .brand { grid-column: 1; }
+        nav { align-self: start; }
+      }
+      @media (prefers-reduced-motion: reduce) { a { transition: none; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="brand"><img src="/assets/ollygarden-symbol.png" alt="" /><span>OllyGarden</span></div>
+      <header>
+        <h1>Presentations, cultivated for the web</h1>
+        <p>One source for a rich browser deck and a static PDF, built around OllyGarden’s visual language.</p>
+        <div class="signal" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </header>
+      <nav aria-label="Available decks">
+        <a href="/templates.html"><strong>Template gallery</strong><span>Core layouts, motion, code, data, and closing patterns.</span></a>
+        <a href="/talks/2026/2026-07-09-wearedevelopers-otel-mistakes/"><strong>Converted talk</strong><span>The July 2026 OpenTelemetry mistakes presentation rebuilt with the new system.</span></a>
+      </nav>
+    </main>
+    <script type="module" src="/src/gallery.ts"></script>
+  </body>
+</html>
