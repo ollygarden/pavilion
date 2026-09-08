@@ -6,7 +6,7 @@ type Tone = 'page' | 'section' | 'light' | 'highlight';
 export function OllyMark({ inverse = false }: { inverse?: boolean }) {
   return (
     <div className={`olly-mark${inverse ? ' olly-mark--inverse' : ''}`}>
-      <img src="/assets/ollygarden-symbol.png" alt="" />
+      <img src={inverse ? '/assets/ollygarden-symbol-dark.png' : '/assets/ollygarden-symbol.png'} alt="" />
       <span>OllyGarden</span>
     </div>
   );
@@ -49,7 +49,7 @@ export function CoverSlide({ title, subtitle, meta, image }: { title: string; su
   return (
     <BaseSlide className="layout-cover" mark={false} style={style}>
       <div className="cover-copy">
-        <OllyMark />
+        <OllyMark inverse />
         <h1>{title}</h1>
         {subtitle && <p>{subtitle}</p>}
         {meta && <small>{meta}</small>}
