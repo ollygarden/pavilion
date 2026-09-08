@@ -65,5 +65,3 @@ Keep the layout grid invisible. Full-slide pixel grids overload the composition 
 Spend visual emphasis in one place per slide. Prefer open fields, shared rules, and asymmetrical negative space over collections of floating rounded cards. Numbering represents a real sequence, never decoration. Keep labels in sentence case, keep lines short, and let typography carry the hierarchy.
 
 Motion is an orchestrated signal, not ambient decoration. Covers use one image reveal and signal scan. Pixel patterns assemble as a slide becomes active. Content fragments resolve in place instead of repeatedly sliding upward. Reduced-motion mode and print remove all animation.
-
-See [framework-research.md](framework-research.md) for the framework decision and source-deck audit.
